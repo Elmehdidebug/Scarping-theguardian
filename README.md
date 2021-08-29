@@ -3,10 +3,10 @@ This is a demo project to crawl the guardian web site using scrapy library and d
 
 ### Prerequisites
 You must have installed:
-Scrapy.
-pymongo.
-dnspython.
-Flask (for API).
+.Scrapy.
+.pymongo.
+.dnspython.
+.Flask (for API).
 
 ### Project Structure
 This project has four major parts :
