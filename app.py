@@ -58,7 +58,7 @@ def findByKeyword():
     }
 
     #if the user provide number of results to show we use limit function
-    res = theguardianTable.find(query).limit(int(limit)) if limit else theguardianTable.find(query)
+    res = theguardianTable.find(query).sort('date',pymongo.DESCENDING).limit(int(limit)) if limit else theguardianTable.find(query).sort('date',pymongo.DESCENDING)
 
     #store everything in a list to loop over it in the html file
     output = []
