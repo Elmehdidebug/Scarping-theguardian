@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CrawlDemo</title>
+
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+            
+</head>
+<body>
+
+	<center><img src="https://lh3.googleusercontent.com/proxy/TOb-PkQQzRFxmfWw-U28KkDYCSTTUtdgM4lUHwXqpayZORbb33ZQXQpSjhROPPqm-oYG2443AaDkVcl0xZCzaCessg8N7MDnzEiOjfCFQ8ywF6sgR9J5HUtIRy0nXf_9azM" style="height: 200px; ;"></center>
+
+
+	<div class="container" style="width: auto; margin-top: 50px">
+		<div class="row">
+			<form action="{{ url_for('findByKeyword')}}" method="post">
+				<div class="input-field col s12">
+					<input placeholder="Entre a keyword" id="keyword" type="text" name="keyword" required>
+					<label for="keyword">Entre a keyword</label>
+				</div>
+				<div class="input-field col s12">
+					<input placeholder="Number of Results (Optional)" id="limit" type="Number" name="limit">
+					<label for="keyword">Number of Results</label>
+				</div>
+				<button type="submit" class="btn btn-primary btn-block">Submit</button>
+			</form>
+		</div>
+
+
+		{% if predict is not none %}
+			<div id="articles">
+				<h4>Results:</h4>
+				{% for row in predict %}
+					<article>
+						<h5>{{ row.title }}</h5>
+						{% if row.authors is not none%}
+							Written by <span class="authors">{{ row.authors }}</span>
+						{% endif %}
+
+						{% if row.date is not none%}
+							at <span class="date">{{ row.date }}</span>
+						{% endif %}
+
+						<p><a href="{{row.url}}">Link to the article</a></p>
+
+						<p class="article">
+							{% autoescape false %}
+							    {{ row.article }}
+							{% endautoescape %}
+						</p>
+					</article>
+				{%endfor%}
+			</div>
+		{% endif %}
+
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+</body>
+</html>

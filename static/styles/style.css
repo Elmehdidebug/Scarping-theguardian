@@ -1,0 +1,16 @@
+.authors {
+	font-family: Georgia, serif;
+	color: #e28743;
+}
+.date {
+	color : #154c79;
+}
+#articles {
+	margin-top: 50px;
+}
+article {
+	padding: 10px;
+}
+article:hover {
+	background-color: #EEE;
+}
