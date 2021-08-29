@@ -29,8 +29,8 @@ You should be able to view the homepage as below :
 ![HomeApplication](https://user-images.githubusercontent.com/61110435/131260695-e910ec06-bfe0-4aef-a6e6-96c2f106dab7.PNG)
 
 
-Enter a keyword to search, you can also add number of results (optional).
+Enter a **keyword to search**, you can also add **number of results (optional)**.
 
-If everything goes well, you should  be able to see all the articles contains the keyword on the HTML page!
+If everything goes well, you should  be able to see all the articles **sorted by date** contains the keyword on the HTML page!
 ![ResultsApplication](https://user-images.githubusercontent.com/61110435/131260757-a90f3288-9703-443f-be8d-257b6b588f6c.PNG)
 
