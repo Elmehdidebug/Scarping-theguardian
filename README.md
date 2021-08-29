@@ -15,7 +15,7 @@ This project has four major parts :
 3. theguardianCrawl - contains the spider to the website, theguardianSpider has the logic of the crawling.
 
 ### Running the project
-1. To have the access to host mongoDB Atlas database, you need to add your connection IP address. So you can either connect by your hosted database and add your connection string into your application code, or send me your IP adress and I'll add you.
+1. To have the access to host mongoDB Atlas database, you need to add your connection IP address. So you can either connect by your hosted database and add your connection string into the application code in app.py file, or send me your IP adress and I'll add it.
 2. Ensure that you are in the project home directory. Run app.py using below command to start Flask API
 
 ```
