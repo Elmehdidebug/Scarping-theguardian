@@ -36,7 +36,7 @@ If everything goes well, you should  be able to see all the articles **sorted by
 4. To add new data go to the url below, wait for a while, you will be redirect to the home page after finishing. 
 
 ```
-http://127.0.0.1:5000/deleteAll
+http://127.0.0.1:5000/insertData
 ```
 
 5. To delete all the data go to the url below, you will be redirect to the home page after finishing.
