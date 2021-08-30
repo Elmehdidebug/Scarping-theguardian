@@ -33,3 +33,14 @@ You should be able to view the homepage as below :
 If everything goes well, you should  be able to see all the articles **sorted by date** contains the keyword on the HTML page!
 ![ResultsApplication](https://user-images.githubusercontent.com/61110435/131260757-a90f3288-9703-443f-be8d-257b6b588f6c.PNG)
 
+4. To add new data go to the url below, wait for a while, you will be redirect to the home page after finishing. 
+
+```
+http://127.0.0.1:5000/deleteAll
+```
+
+5. To delete all the data go to the url below, you will be redirect to the home page after finishing.
+
+```
+http://127.0.0.1:5000/deleteAll
+```
