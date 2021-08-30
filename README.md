@@ -12,7 +12,7 @@ You must have installed:
 This project has four major parts :
 1. app.py - This contains Flask APIs that receives keyword through GUI or API calls, search by it and returns it.
 2. templates - This folder contains the HTML template to allow user to enter the keyword and displays the articles.
-3. theguardianCrawl - contains the spider to the website, theguardianSpider has the logic of the crawling.
+3. theguardianCrawl - contains the spiders, theguardianSpider.py is the spider to the website.
 
 ### Running the project
 1. Ensure that you are in the project home directory. Run app.py using below command to start Flask API
